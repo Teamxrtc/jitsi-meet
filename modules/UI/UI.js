@@ -769,7 +769,7 @@ UI.showLoginPopup = function(callback) {
         "dialog.Ok",
         function (e, v, m, f) {
             if (v) {
-                if (f.username && f.password) {
+                if (f.username) { //For internal_plain authentication, username alone is used in some cases.
                     callback(f.username, f.password);
                 }
             }
